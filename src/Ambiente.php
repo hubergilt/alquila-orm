@@ -43,13 +43,13 @@ class Ambiente
 	private $estado;
 
     /**
-     * @ORM\OneToMany(targetEntity="Deposito", mappedBy="arendatario")
+     * @ORM\OneToMany(targetEntity="Deposito", mappedBy="ambiente")
      * @var Deposito[] An ArrayCollection of Deposito objects.
      */	
 	private $depositos;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Arrendatario", inversedBy="arrendatarios")
+     * @ORM\ManyToOne(targetEntity="Arrendatario", inversedBy="ambientes")
      */
     private $arrendatario;
 
