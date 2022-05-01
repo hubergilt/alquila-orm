@@ -1,0 +1,23 @@
+{
+    "name": "huber/alquila-orm",
+    "description": "Project for building alquiladb ORM",
+    "type": "project",
+    "require": {
+        "doctrine/orm": "^2.12",
+        "doctrine/dbal": "^3.3",
+        "doctrine/annotations": "^1.13",
+        "symfony/cache": "^6.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Huber\\AlquilaOrm\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Huber Gilt",
+            "email": "hubergilt@hotmail.com"
+        }
+    ]
+}
