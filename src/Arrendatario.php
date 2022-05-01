@@ -21,4 +21,10 @@ class Arrendatario
 	 * @var string
 	 */
 	private $nombre;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Deposito", mappedBy="arendatario")
+     * @var Deposito[] An ArrayCollection of Deposito objects.
+     */	
+	private $depositos;
 }

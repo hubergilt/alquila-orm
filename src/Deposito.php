@@ -21,4 +21,10 @@ class Deposito
 	 * @var string
 	 */
 	private $nombre;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Arrendatario", inversedBy="depositos")
+     */
+    private $arrendatario;
+
 }
