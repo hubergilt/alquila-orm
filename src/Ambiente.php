@@ -4,9 +4,9 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity
- * @ORM\Table(name="arrendatarios")
+ * @ORM\Table(name="ambientes")
  */
-class Arrendatario
+class Ambiente
 {
 	/**
 	 * @ORM\Id
@@ -20,26 +20,27 @@ class Arrendatario
 	 * @ORM\Column(type="string", length="45")
 	 * @var string
 	 */
-	private $nombres;
+	private $nombre;
 
 	/**
-	 * @ORM\Column(type="string", length="45")
+	 * @ORM\Column(type="string", length="20")
 	 * @var string
 	 */
-	private $paterno;
+	private $piso;
 
 
 	/**
-	 * @ORM\Column(type="string", length="45")
-	 * @var string
+	 * @ORM\Column(type="decimal", precision=10, scale=2)
+	 * @var decimal
 	 */
-	private $materno;
+	private $precio;
+
 
 	/**
-	 * @ORM\Column(type="string", length="8")
+	 * @ORM\Column(type="string", length="10")
 	 * @var string
 	 */
-	private $dni;
+	private $estado;
 
     /**
      * @ORM\OneToMany(targetEntity="Deposito", mappedBy="arendatario")
@@ -48,9 +49,8 @@ class Arrendatario
 	private $depositos;
 
     /**
-     * @ORM\OneToMany(targetEntity="Ambiente", mappedBy="arendatario")
-     * @var Ambiente[] An ArrayCollection of Ambiente objects.
-     */	
-	private $ambientes;
+     * @ORM\ManyToOne(targetEntity="Arrendatario", inversedBy="arrendatarios")
+     */
+    private $arrendatario;
 
 }
